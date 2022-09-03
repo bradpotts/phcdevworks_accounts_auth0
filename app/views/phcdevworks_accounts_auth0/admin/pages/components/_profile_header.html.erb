@@ -1,0 +1,27 @@
+<div class="profile-header">
+
+  <!-- User Profiles - Header - Cover -->
+  <div class="profile-header-cover"></div>
+  <!-- User Profiles - Header - Cover -->
+
+  <!-- User Profiles - Header - Content -->
+  <div class="profile-header-content">
+    <div class="profile-header-img">
+      <%= image_tag @admin_user.gravatar_url :secure => true, :filetype => :png, :size => 128 %>
+    </div>
+    <div class="profile-header-info">
+      <h4 class="m-t-10 m-b-5"><%= @admin_user.firstname + ' ' + @admin_user.lastname  %></h4>
+      <p class="m-b-10"><%= @admin_user.username %></p>
+      <%= link_to edit_user_registration_path(@admin_user), class: "btn btn-xs btn-yellow" do %>
+        <i class="fad fa-user-edit"></i> Update Member Information
+      <% end %>
+    </div>
+  </div>
+  <!-- User Profiles - Header - Content -->
+
+  <!-- User Profiles - Header - Tab Bar -->
+  <ul class="profile-header-tab nav nav-tabs">
+  </ul>
+  <!-- User Profiles - Header - Tab Bar -->
+
+</div>

@@ -1,0 +1,22 @@
+<!-- PHCTitleSEO Title Variables -->
+<% phc_title "User Manager" %>
+<% phc_title_tagline "Useer Profile" %>
+<% phc_breadcrumb_one yield(:phc_title) %>
+<% phc_breadcrumb_two yield(:phc_title_tagline) %>
+<!-- PHCTitleSEO Title Variables -->
+
+<!-- User Profiles - Header -->
+<div class="profile">
+	<%= render 'phcdevworks_accounts_devise/admin/pages/components/profile_header' %>
+</div>
+<!-- User Profiles - Header -->
+
+<!-- User Profiles - Remove Full Page Width -->
+<div class="profile-content">
+	<div class="tab-content p-0">
+
+		<%= render 'phcdevworks_notifications/bootstrap/notifications' %>
+
+	</div>
+</div>
+<!-- User Profiles - Remove Full Page Width -->

@@ -1,0 +1,4 @@
+development:
+  auth0_domain: <%= ENV["phc_dev_auth0_domain"] %>
+  auth0_client_id: <%= ENV["phc_dev_auth0_client_id"] %>
+  auth0_client_secret: <%= ENV["phc_dev_auth0_client_secret"] %>
