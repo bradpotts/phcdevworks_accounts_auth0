@@ -1,1 +1,2 @@
-//= link_directory ../stylesheets/phcdevworks_accounts_auth0 .css
+//= link coloradmin/default/phcthemes_admin_panel_pack_coloradmin.css
+//= link coloradmin/phcthemes_admin_panel_pack_coloradmin.js
