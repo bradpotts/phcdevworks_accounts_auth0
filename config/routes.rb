@@ -8,5 +8,6 @@ PhcdevworksAccountsAuth0::Engine.routes.draw do
     get '/auth/auth0/callback' => 'auth/handler#callback'
     get '/auth/failure' => 'auth/handler#failure'
     get '/auth/logout' => 'auth/handler#logout'
+    get '/auth/redirect' => 'auth/handler#redirect'
 
 end
