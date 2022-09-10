@@ -12,7 +12,7 @@
 							<%= image_tag current_user.gravatar_url %>
 						<% end %>
 						<% if defined?phcdevworks_accounts_auth0 %>
-
+							<%= image_tag current_user['picture'] %>
 						<% end %>
 					</div>
 					<div class="menu-profile-info">
@@ -22,12 +22,19 @@
 									<%= current_user.firstname + " " + current_user.lastname  %>
 								<% end %>
 								<% if defined?phcdevworks_accounts_auth0 %>
-									<%= current_user.name %>
+									<%= current_user['name'] %>
 								<% end %>
 							</div>
 							<div class="menu-caret ms-auto"></div>
 						</div>
-						<small><%= current_user.username %></small>
+						<small>
+							<% if defined?phcdevworks_accounts_devise %>
+								<%= current_user.username %>
+							<% end %>
+							<% if defined?phcdevworks_accounts_auth0 %>
+								<%= current_user['nickname'] %>
+							<% end %>
+						</small>
 					</div>
 				</a>
 			<% end %>
@@ -843,7 +850,7 @@
 
 		<!-- -PHCDEV- Page Container - Sidebar - Navigation - PHCDevworks Accounts -->
 		
-		<% if defined?phcdevworks_accounts_stripe and current_user.admin? %>
+		<% if defined?phcdevworks_accounts_stripe and defined?phcdevworks_accounts_devise and current_user.admin? %>
 			<div class="menu-header">Subscription Administration</div>
 			<div class="menu-item has-sub">
 				<a href="javascript:;" class="menu-link">
@@ -899,7 +906,7 @@
 				</div>
 			</div>
 		<% end %>
-		<% if current_user and current_user.admin? %>
+		<% if defined?phcdevworks_accounts_devise and current_user and current_user.admin? %>
 			<div class="menu-header">Login Administration</div>
 			<div class="menu-item has-sub">
 				<a href="javascript:;" class="menu-link">

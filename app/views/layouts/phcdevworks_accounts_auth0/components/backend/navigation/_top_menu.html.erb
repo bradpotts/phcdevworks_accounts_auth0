@@ -19,9 +19,9 @@
   <div class="navbar-nav">
     <div class="navbar-item navbar-user dropdown">
       <a href="#" class="navbar-link dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown">
-        <%= image_tag current_user.gravatar_url %>
+        <%= image_tag current_user['picture'] %>
         <span>
-          <span class="d-none d-md-inline"><%= current_user.firstname + " " + current_user.lastname %></span>
+          <span class="d-none d-md-inline"><%= current_user['name'] %></span>
           <b class="caret"></b>
         </span>
       </a>
