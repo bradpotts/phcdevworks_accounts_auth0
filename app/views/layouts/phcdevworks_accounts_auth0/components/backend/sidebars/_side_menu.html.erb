@@ -8,12 +8,22 @@
 				<a href="javascript:;" class="menu-profile-link" data-toggle="app-sidebar-profile" data-target="#appSidebarProfileMenu">
 					<div class="menu-profile-cover with-shadow"></div>
 					<div class="menu-profile-image">
-						<%= image_tag current_user.gravatar_url %>
+						<% if defined?phcdevworks_accounts_devise %>
+							<%= image_tag current_user.gravatar_url %>
+						<% end %>
+						<% if defined?phcdevworks_accounts_auth0 %>
+
+						<% end %>
 					</div>
 					<div class="menu-profile-info">
 						<div class="d-flex align-items-center">
 							<div class="flex-grow-1">
-								<%= current_user.firstname + " " + current_user.lastname  %>
+								<% if defined?phcdevworks_accounts_devise %>
+									<%= current_user.firstname + " " + current_user.lastname  %>
+								<% end %>
+								<% if defined?phcdevworks_accounts_auth0 %>
+									<%= current_user.name %>
+								<% end %>
 							</div>
 							<div class="menu-caret ms-auto"></div>
 						</div>
