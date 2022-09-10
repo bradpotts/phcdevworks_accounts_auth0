@@ -25,7 +25,6 @@ module PhcdevworksAccountsAuth0
         returnTo: root_url,
         client_id: AUTH0_CONFIG['auth0_client_id']
       }
-
       URI::HTTPS.build(host: AUTH0_CONFIG['auth0_domain'], path: '/v2/logout', query: to_query(request_params)).to_s
     end
 

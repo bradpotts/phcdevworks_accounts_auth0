@@ -5,7 +5,6 @@ PhcdevworksAccountsAuth0::Engine.routes.draw do
     get "profile" => 'user/pages#profile'
 
     # Auth Routes
-    get "/auth/", as: "authentication"
     get "/auth/callback" => "auth/handler#callback"
     get "/auth/failure" => "auth/handler#failure"
     get "/auth/logout" => "auth/handler#logout"

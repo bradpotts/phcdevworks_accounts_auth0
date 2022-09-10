@@ -8,7 +8,5 @@ module PhcdevworksAccountsAuth0
       @user = session[:userinfo]
     end
 
-
-
   end
 end
