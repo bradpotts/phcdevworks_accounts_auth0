@@ -7,7 +7,7 @@ module Secured
     end
 
     def logged_in_using_omniauth?
-        redirect_to '/' unless session[:userinfo].present?
+        redirect_to main_app.root_path unless session[:userinfo].present?
     end
 
 end

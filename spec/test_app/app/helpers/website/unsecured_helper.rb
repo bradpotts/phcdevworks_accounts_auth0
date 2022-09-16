@@ -1,0 +1,2 @@
+module Website::UnsecuredHelper
+end

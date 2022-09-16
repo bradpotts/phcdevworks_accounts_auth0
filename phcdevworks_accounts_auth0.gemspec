@@ -57,5 +57,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "spring", "~> 4.0"
   spec.add_development_dependency "spring-commands-rspec", "~> 1.0"
   spec.add_development_dependency "sqlite3", "~> 1.4"
+  spec.add_development_dependency "dotenv-rails", "~> 2.8"
 
 end
