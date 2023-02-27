@@ -22,7 +22,6 @@ module PhcdevworksAccountsAuth0
     require "mini_magick"
 
     # Frontend Dependencies
-    require "wicked"
     require "friendly_id"
 
     # Mailer Dependencies
