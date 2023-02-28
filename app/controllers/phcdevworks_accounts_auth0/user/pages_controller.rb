@@ -1,12 +1,14 @@
 module PhcdevworksAccountsAuth0
-  class User::PagesController < ApplicationController
+    class User::PagesController < ApplicationController
 
-    def dashboard
+        # User - Dashboard
+        def dashboard
+        end
+
+        # User - Profile
+        def profile
+            @user = session[:userinfo]
+        end
+
     end
-
-    def profile
-      @user = session[:userinfo]
-    end
-
-  end
 end
