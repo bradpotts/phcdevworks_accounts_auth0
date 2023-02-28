@@ -3,7 +3,6 @@ module PhcdevworksAccountsAuth0
 
         # PHCDEVONE - Add Requried Dependencies
         require "omniauth-auth0"
-        require "omniauth-rails_csrf_protection"
 
         # PHCDEVONE - Isolate Engine
         isolate_namespace PhcdevworksAccountsAuth0
