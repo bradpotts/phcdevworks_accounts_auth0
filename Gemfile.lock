@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    phcdevworks_accounts_auth0 (1.1.4b)
+    phcdevworks_accounts_auth0 (1.1.5b)
       omniauth-auth0 (~> 3.1)
       omniauth-rails_csrf_protection (~> 1.0)
       phcdevworks_active_menus (~> 4.0)

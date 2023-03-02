@@ -2,7 +2,8 @@
     class Auth::HandlerController < ApplicationController
 
         def callback
-            session[:userinfo] = request.env["omniauth.auth"]["extra"]["raw_info"]
+            info = request.env['omniauth.auth']
+            session[:user_info] = info['extra']['raw_info']
             redirect_to main_app.root_path
         end
 
