@@ -1,14 +1,13 @@
-module PhcdevworksAccountsAuth0
+    module PhcdevworksAccountsAuth0
     class Auth::HandlerController < ApplicationController
 
         def callback
-            auth_info = request.env["omniauth.auth"]
-            session[:userinfo] = auth_info["extra"]["raw_info"]
+            session[:userinfo] = request.env['omniauth.auth']['extra']['raw_info']
             redirect_to main_app.root_path
         end
 
         def failure
-            @error_msg = request.params["message"]
+            @error_msg = request.params['message']
         end
 
         def logout
@@ -18,14 +17,14 @@ module PhcdevworksAccountsAuth0
 
         private
 
-        AUTH0_CONFIG = Rails.application.config_for(:auth0)
+        AUTH0_CONFIG = Rails.application.config.auth0
 
         def logout_url
             request_params = {
-                returnTo: main_app.root_url,
-                client_id: AUTH0_CONFIG['auth0_client_id']
+                returnTo: root_url,
+                client_id: Rails.application.config.auth0['auth0_client_id']
             }
-            URI::HTTPS.build(host: AUTH0_CONFIG["auth0_domain"], path: "/v2/logout", query: to_query(request_params)).to_s
+            URI::HTTPS.build(host: AUTH0_CONFIG['auth0_domain'], path: '/v2/logout', query: request_params.to_query).to_s
         end
 
         def to_query(hash)

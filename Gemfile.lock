@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    phcdevworks_accounts_auth0 (1.1.3b)
+    phcdevworks_accounts_auth0 (1.1.4b)
       omniauth-auth0 (~> 3.1)
       omniauth-rails_csrf_protection (~> 1.0)
       phcdevworks_active_menus (~> 4.0)
@@ -78,7 +78,7 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
-    autoprefixer-rails (10.4.7.0)
+    autoprefixer-rails (10.4.13.0)
       execjs (~> 2)
     bootstrap (5.2.3)
       autoprefixer-rails (>= 9.1.0)
