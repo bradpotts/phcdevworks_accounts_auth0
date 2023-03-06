@@ -1,0 +1,14 @@
+development:
+  auth0_client_id: <%= Rails.application.credentials.dig(:auth, :auth0_client_id) %>
+  auth0_client_secret: <%= Rails.application.credentials.dig(:auth, :auth0_secret) %>
+  auth0_domain: <%= Rails.application.credentials.dig(:auth, :auth0_domain) %>
+
+test:
+  auth0_client_id: <%= Rails.application.credentials.dig(:auth, :auth0_client_id) %>
+  auth0_client_secret: <%= Rails.application.credentials.dig(:auth, :auth0_secret) %>
+  auth0_domain: <%= Rails.application.credentials.dig(:auth, :auth0_domain) %>
+
+production:
+  auth0_client_id: <%= Rails.application.credentials.dig(:auth, :auth0_client_id) %>
+  auth0_client_secret: <%= Rails.application.credentials.dig(:auth, :auth0_secret) %>
+  auth0_domain: <%= Rails.application.credentials.dig(:auth, :auth0_domain) %>
