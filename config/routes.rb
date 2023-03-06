@@ -1,8 +1,8 @@
 PhcdevworksAccountsAuth0::Engine.routes.draw do
 
     # PHCDEVONE - User Routes
-    get "user/dashboard" => 'user/pages#dashboard'
-    get "user/profile" => 'user/pages#profile'
+    get "user/dashboard" => "user/pages#dashboard"
+    get "user/profile" => "user/pages#profile"
 
     # PHCDEVONE - Auth Routes
     get "/auth/callback" => "auth/handler#callback"

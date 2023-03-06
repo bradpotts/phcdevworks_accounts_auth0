@@ -1,3 +1,3 @@
 module PhcdevworksAccountsAuth0
-  VERSION = "1.1.5b"
+  VERSION = "2.0.0b"
 end

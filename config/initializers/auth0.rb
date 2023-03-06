@@ -9,6 +9,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
         callback_path: "/auth/callback",
         authorize_params: {
             scope: "openid profile"
+            #connection: "google-oauth2"
         }
     )
 end

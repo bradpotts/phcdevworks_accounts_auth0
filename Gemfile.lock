@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    phcdevworks_accounts_auth0 (1.1.5b)
+    phcdevworks_accounts_auth0 (2.0.0b)
       omniauth-auth0 (~> 3.1)
       omniauth-rails_csrf_protection (~> 1.0)
       phcdevworks_active_menus (~> 4.0)
@@ -247,6 +247,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  omniauth-rails_csrf_protection
   phcdevworks_accounts_auth0!
   sprockets-rails
   sqlite3
