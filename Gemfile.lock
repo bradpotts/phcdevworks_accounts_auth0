@@ -116,7 +116,7 @@ GEM
     marcel (1.0.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
-    minitest (5.17.0)
+    minitest (5.18.0)
     multi_xml (0.6.0)
     net-imap (0.3.4)
       date
@@ -179,7 +179,7 @@ GEM
       sassc-rails (~> 2.1)
     popper_js (2.11.6)
     racc (1.6.2)
-    rack (2.2.6.2)
+    rack (2.2.6.3)
     rack-protection (3.0.5)
       rack
     rack-test (2.0.2)
@@ -237,6 +237,7 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     version_gem (1.1.1)
+    webrick (1.8.1)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -249,6 +250,7 @@ DEPENDENCIES
   phcdevworks_accounts_auth0!
   sprockets-rails
   sqlite3
+  webrick
 
 BUNDLED WITH
    2.3.26
